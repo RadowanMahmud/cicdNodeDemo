@@ -25,11 +25,5 @@ app.get('/substract/:a/:b', (req, res) => {
 });
 
 
-//app.listen(port, () => { console.log('Our App Is Up And Running!'); });
-
-var server_port = process.env.PORT || 80;
-var server_host = '0.0.0.0';
-app.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
-});
+app.listen(port, () => { console.log('Our App Is Up And Running!'); });
 module.exports = app
