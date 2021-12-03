@@ -1,4 +1,5 @@
 const express = require('express');
+const port = process.env.port || 3000;
 const app = express();
 
 app.get('/', (req, res) => {
@@ -23,7 +24,6 @@ app.get('/substract/:a/:b', (req, res) => {
     res.send("The result is : "+Number(sum));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+
+app.listen(port, () => { console.log('Our App Is Up And Running!'); });
+module.exports = app
